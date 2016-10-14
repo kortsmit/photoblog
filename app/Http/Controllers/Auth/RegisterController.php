@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace PhotoBlog\Http\Controllers\Auth;
 
-use App\User;
+use PhotoBlog\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use PhotoBlog\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
