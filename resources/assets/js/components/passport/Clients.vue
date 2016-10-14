@@ -238,13 +238,6 @@
         },
 
         /**
-         * Prepare the component (Vue 1.x).
-         */
-        ready() {
-            this.prepareComponent();
-        },
-
-        /**
          * Prepare the component (Vue 2.x).
          */
         mounted() {
