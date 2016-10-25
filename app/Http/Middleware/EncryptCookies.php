@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Http\Middleware;
+namespace Picturesque\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

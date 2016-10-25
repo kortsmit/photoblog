@@ -1,9 +1,24 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+.container {
+  padding-top: 20px
+}
 
-// Variables
-@import "variables";
+.list-group-item {
+  &.v-link-active,
+  &.v-link-active:hover,
+  &.v-link-active:focus {
+    z-index: 2;
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border;
+  }
+}
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+.navbar-nav .nav-item a {
+  &.v-link-active,
+  &.v-link-active:hover,
+  &.v-link-active:focus {
+    color: rgba(0,0,0,.8);
+  }
+}

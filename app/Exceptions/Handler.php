@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Exceptions;
+namespace Picturesque\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

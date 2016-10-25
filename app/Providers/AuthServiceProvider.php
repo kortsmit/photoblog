@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Providers;
+namespace Picturesque\Providers;
 
 use Laravel\Passport\Passport;
 use Illuminate\Support\Facades\Gate;
@@ -14,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'PhotoBlog\Model' => 'PhotoBlog\Policies\ModelPolicy',
+        'Picturesque\Model' => 'Picturesque\Policies\ModelPolicy',
     ];
 
     /**

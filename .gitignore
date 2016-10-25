@@ -6,3 +6,7 @@ Homestead.json
 Homestead.yaml
 .env
 .idea
+/public/assets/*
+/public/build/*
+/public/css
+/public/js

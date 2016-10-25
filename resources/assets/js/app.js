@@ -12,14 +12,14 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
-window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+//window.$ = window.jQuery = require('jquery');
+//require('bootstrap-sass');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
  * using reactive data binding and reusable components. Vue's API is clean
- * and simple, leaving you to focus on building your next great project.
- */
+* and simple, leaving you to focus on building your next great project.
+*/
 
 window.Vue = require('vue');
 require('vue-resource');
@@ -79,20 +79,29 @@ Vue.component(
 );
 
 // testing
-const Home = { template: '<div>Home</div>' }
-const Login = { template: '<div>Login</div>' }
-const Admin = { template: '<div>Admin</div>' }
+import App from './picturesque-app.vue'
+import Home from './components/picturesque-home.vue'
+import Blog from './components/picturesque-blog.vue'
+// import Post from './components/picturesque-post.vue'
+import About from './components/picturesque-about.vue'
+// import Contact from './components/picturesque-contact.vue'
+// import Admin from './components/picturesque-admin.vue'
+// import AdminPosts from './components/admin/picturesque-posts.vue'
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/login', component: Login },
-    { path: '/admin', component: Admin }
+    { path: '/', name: 'home', component: Home },
+    { path: '/blog', name: 'blog', component: Blog },
+    { path: '/about', name: 'about', component: About }
 ]
 
 const router = new VueRouter({
+    mode: 'history',
     routes
 })
 
 const app = new Vue({
-    router
-}).$mount('#app')
+    router,
+    App
+})
+
+export { app, router }

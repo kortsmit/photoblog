@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Http;
+namespace Picturesque\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use CreateFreshApiToken;
@@ -25,11 +25,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \PhotoBlog\Http\Middleware\EncryptCookies::class,
+            \Picturesque\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \PhotoBlog\Http\Middleware\VerifyCsrfToken::class,
+            \Picturesque\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
@@ -53,7 +53,7 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \PhotoBlog\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Picturesque\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }
