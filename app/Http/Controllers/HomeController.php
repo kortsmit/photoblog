@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Http\Controllers;
+namespace Picturesque\Http\Controllers;
 
 use Illuminate\Http\Request;
 

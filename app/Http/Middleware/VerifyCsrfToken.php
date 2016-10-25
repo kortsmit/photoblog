@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Http\Middleware;
+namespace Picturesque\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 

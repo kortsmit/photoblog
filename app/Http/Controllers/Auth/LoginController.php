@@ -1,8 +1,8 @@
 <?php
 
-namespace PhotoBlog\Http\Controllers\Auth;
+namespace Picturesque\Http\Controllers\Auth;
 
-use PhotoBlog\Http\Controllers\Controller;
+use Picturesque\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller

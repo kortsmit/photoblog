@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Providers;
+namespace Picturesque\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

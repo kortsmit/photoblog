@@ -1,6 +1,6 @@
 <?php
 
-namespace PhotoBlog\Http\Middleware;
+namespace Picturesque\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

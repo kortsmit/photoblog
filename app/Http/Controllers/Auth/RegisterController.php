@@ -1,10 +1,10 @@
 <?php
 
-namespace PhotoBlog\Http\Controllers\Auth;
+namespace Picturesque\Http\Controllers\Auth;
 
-use PhotoBlog\User;
+use Picturesque\User;
 use Validator;
-use PhotoBlog\Http\Controllers\Controller;
+use Picturesque\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
