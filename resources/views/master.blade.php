@@ -8,18 +8,20 @@
     <title>Vue 2.0 Testing</title>
 
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
+
+    <script>
+        window.Laravel = { csrfToken: '{{ csrf_token() }}' };
+    </script>
 </head>
 <body>
-
-    <div id="app">
-        <h1>Home</h1>
-        <p>
-            <router-link to="/">Home</router-link>
-            <router-link to="/login">Login</router-link>
-            <router-link to="/admin">Admin</router-link>
-        </p>
-        <router-view></router-view>
-    </div>
+{{--<h1>Home</h1>--}}
+{{--<p>--}}
+    {{--<router-link to="/">Home</router-link>--}}
+    {{--<router-link to="/blog">Login</router-link>--}}
+    {{--<router-link to="/about">Admin</router-link>--}}
+{{--</p>--}}
+{{--<router-view></router-view>--}}
+    <div id="app"></div>
 
     <script src="{{ elixir('js/app.js') }}"></script>
 </body>
