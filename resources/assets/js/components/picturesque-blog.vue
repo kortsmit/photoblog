@@ -40,6 +40,7 @@
                 let self = this
                 self.$http.get('api/posts')
                     .then(function (response) {
+                        console.log(response)
                         self.posts = JSON.parse(response.data).data
                     })
             },
