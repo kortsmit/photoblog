@@ -2,22 +2,22 @@
     <div class="col-md-2">
         <div class="list-group">
             <router-link
-                to="{ path: '/admin/posts' }"
+                to="/admin/posts"
                 class="list-group-item">
                 Posts
             </router-link>
             <router-link
-                to="{ path: '/admin/categories' }"
+                to="/admin/categories"
                 class="list-group-item">
                 Categories
             </router-link>
             <router-link
-                to="{ path: '/admin/photos' }"
+                to="/admin/photos"
                 class="list-group-item">
                 Photos
             </router-link>
             <router-link
-                to="{ path: '/admin/users' }"
+                to="/admin/users"
                 class="list-group-item">
                 Users
             </router-link>

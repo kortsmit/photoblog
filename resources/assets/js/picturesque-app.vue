@@ -11,10 +11,6 @@
     </div>
 </template>
 
-<style>
-
-</style>
-
 <script>
     import PicturesqueNavigation from './components/template/picturesque-navigation.vue'
 
