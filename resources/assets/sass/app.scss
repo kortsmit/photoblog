@@ -4,10 +4,15 @@
   padding-top: 20px
 }
 
+.navbar-nav .nav-item li {
+  cursor: pointer;
+}
+
 .list-group-item {
-  &.v-link-active,
-  &.v-link-active:hover,
-  &.v-link-active:focus {
+  &.router-link-active,
+  &.router-link-active:hover,
+  &.router-link-active:focus {
+    cursor: pointer;
     z-index: 2;
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
@@ -15,10 +20,10 @@
   }
 }
 
-.navbar-nav .nav-item a {
-  &.v-link-active,
-  &.v-link-active:hover,
-  &.v-link-active:focus {
+.navbar-nav .nav-item li {
+  &.router-link-active,
+  &.router-link-active:hover,
+  &.router-link-active:focus {
     color: rgba(0,0,0,.8);
   }
 }

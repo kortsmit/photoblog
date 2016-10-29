@@ -3,7 +3,9 @@
         <h1>Posts</h1>
 
         <div class="row">
-            <picturesque-menu :current="posts"></picturesque-menu>
+            <picturesque-menu
+                :current="posts">
+            </picturesque-menu>
 
             <div class="col-md-10">
                 <table class="table table-hover">
@@ -15,7 +17,7 @@
                             <th></th>
                             <th width="1%">
                                 <router-link
-                                   to="{ name: 'admin.posts.create' }"
+                                   :to="{ name: 'admin.posts.create' }"
                                    class="btn btn-success">Create</router-link>
                             </th>
                         </tr>
@@ -27,7 +29,7 @@
                             <td>{{ post.title }}</td>
                             <td>
                                 <router-link
-                                    to="{ name: 'admin.post.edit', params: { id: post.id }}"
+                                    :to="{ name: 'admin.post.edit', params: { id: post.id }}"
                                     class="btn btn-secondary">Edit</router-link>
                             </td>
                             <td>
@@ -40,7 +42,10 @@
 
                 </table>
 
-                <picturesque-pagination :pagination="pagination" :callback="fetchPosts"></picturesque-pagination>
+                <picturesque-pagination
+                    :pagination="pagination"
+                    :callback="fetchPosts">
+                </picturesque-pagination>
 
             </div>
 

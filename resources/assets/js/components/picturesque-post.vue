@@ -50,7 +50,7 @@
                 let self = this
                 self.$http.get('api/posts/slug/' + this.postSlug)
                     .then(function (response) {
-                        self.post = JSON.parse(response.data)
+                        self.post = response.data
                     })
             },
 

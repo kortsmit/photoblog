@@ -17,7 +17,7 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js')
        .version(['public/js/app.js', 'public/css/app.css'])
-       .browserSync({
-        proxy: 'photoblog.local'
-    });
+       //.browserSync({
+        //proxy: 'photoblog.local'
+    //});
 });

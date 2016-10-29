@@ -75,29 +75,29 @@ import AdminUsers from './components/admin/picturesque-users.vue'
 import AdminUsersForm from './components/admin/picturesque-users-form.vue'
 
 const routes = [
-    { path: '/', name: 'home', component: Home },
-    { path: '/blog', name: 'blog', component: Blog },
-    { path: '/blog/:slug', name: 'post', component: Post },
-    { path: '/about', name: 'about', component: About },
-    { path: '/contact', name: 'contact', component: Contact },
-    { path: '/admin', name: 'contact', component: Admin },
+    {path: '/', name: 'home', component: Home},
+    {path: '/blog', name: 'blog', component: Blog},
+    {path: '/blog/:slug', name: 'post', component: Post},
+    {path: '/about', name: 'about', component: About},
+    {path: '/contact', name: 'contact', component: Contact},
+    {path: '/admin', name: 'contact', component: Admin},
 
-    { path: '/admin/posts', name: 'admin.posts', component: AdminPosts },
-    { path: '/admin/posts/create', name: 'admin.posts.create', component: AdminPostsForm },
-    { path: '/admin/posts/:id/edit', name: 'admin.posts.edit', component: AdminPostsForm },
-    { path: '/admin/categories', name: 'admin.categories', component: AdminCategories },
-    { path: '/admin/categories/create', name: 'admin.categories.create', component: AdminCategoriesForm },
-    { path: '/admin/categories/:id/edit', name: 'admin.categories.edit', component: AdminCategoriesForm },
-    { path: '/admin/photos', name: 'admin.photos', component: AdminPhotos },
-    { path: '/admin/photos/create', name: 'admin.photos.create', component: AdminPhotosForm },
-    { path: '/admin/photos/:id/edit', name: 'admin.photos.edit', component: AdminPhotosForm },
-    { path: '/admin/users', name: 'admin.users', component: AdminUsers },
-    { path: '/admin/users/create', name: 'admin.users.create', component: AdminUsersForm },
-    { path: '/admin/users/:id/edit', name: 'admin.users.edit', component: AdminUsersForm },
+    {path: '/admin/posts', name: 'admin.posts', component: AdminPosts},
+    {path: '/admin/posts/create', name: 'admin.posts.create', component: AdminPostsForm},
+    {path: '/admin/posts/:id/edit', name: 'admin.posts.edit', component: AdminPostsForm},
+    {path: '/admin/categories', name: 'admin.categories', component: AdminCategories},
+    {path: '/admin/categories/create', name: 'admin.categories.create', component: AdminCategoriesForm},
+    {path: '/admin/categories/:id/edit', name: 'admin.categories.edit', component: AdminCategoriesForm},
+    {path: '/admin/photos', name: 'admin.photos', component: AdminPhotos},
+    {path: '/admin/photos/create', name: 'admin.photos.create', component: AdminPhotosForm},
+    {path: '/admin/photos/:id/edit', name: 'admin.photos.edit', component: AdminPhotosForm},
+    {path: '/admin/users', name: 'admin.users', component: AdminUsers},
+    {path: '/admin/users/create', name: 'admin.users.create', component: AdminUsersForm},
+    {path: '/admin/users/:id/edit', name: 'admin.users.edit', component: AdminUsersForm},
 ]
 
 const router = new VueRouter({
-    mode: 'history',
+    //mode: 'history',
     routes
 })
 

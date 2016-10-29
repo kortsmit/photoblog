@@ -77,15 +77,15 @@
                                 :disabled="formSaving"
                                 class="btn btn-primary">Save</button>
                         <div class="btn-group" role="group">
+                            <!--:disabled="post.published == 0"-->
                             <button type="button"
                                     @click="togglePublished(0)"
-                                    :disabled="post.published == 0"
                                     :disabled="formSaving"
                                     :class="{ 'btn-success' : post.published == 0 }"
                                     class="btn btn-secondary">Draft</button>
+                            <!--:disabled="post.published == 1"-->
                             <button type="button"
                                     @click="togglePublished(1)"
-                                    :disabled="post.published == 1"
                                     :disabled="formSaving"
                                     :class="{ 'btn-success' : post.published == 1 }"
                                     class="btn btn-secondary">Publish</button>
@@ -151,7 +151,7 @@
                 let self = this
                 self.$http.get('api/posts/' + this.post.id)
                     .then(function (response) {
-                        self.post = JSON.parse(response.data)
+                        self.post = response.data
                     })
             },
 
@@ -172,11 +172,11 @@
                 self.$http.post('api/posts', self.post)
                     .then(function (response) {
                         console.log('success', response)
-                        self.post.id = JSON.parse(response.data).id
+                        self.post.id = response.data.id
                         self.formSaving = false
                     })
                     .catch(function (response, status, request) {
-                        var errors = JSON.parse(response.data)
+                        var errors = response.data
                         self.formErrors = errors
                         self.formSaving = false
                     })
@@ -190,7 +190,7 @@
                         self.formSaving = false
                     })
                     .catch(function (response, status, request) {
-                        var errors = JSON.parse(response.data)
+                        var errors = response.data
                         self.formErrors = errors
                         self.formSaving = false
                     })

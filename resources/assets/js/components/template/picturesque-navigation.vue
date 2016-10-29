@@ -5,7 +5,7 @@
             <li class="nav-item">
                 <router-link
                     class="nav-link"
-                    to="/"
+                    :to="{ path: '/', exact: true }"
                     tag="li">
                     Home
                 </router-link>
@@ -13,7 +13,7 @@
             <li class="nav-item">
                 <router-link
                     class="nav-link"
-                    to="/blog"
+                    :to="{ path: '/blog'}"
                     tag="li">
                     Blog
                 </router-link>
@@ -21,7 +21,7 @@
             <li class="nav-item">
                 <router-link
                     class="nav-link"
-                    to="/about"
+                    :to="{ path: '/about' }"
                     tag="li">
                     About
                 </router-link>
@@ -29,7 +29,7 @@
             <li class="nav-item">
                 <router-link
                     class="nav-link"
-                    to="/contact"
+                    :to="{ path: '/contact' }"
                     tag="li">
                     Contact
                 </router-link>
@@ -37,7 +37,7 @@
             <li class="nav-item">
                 <router-link
                     class="nav-link"
-                    to="/admin"
+                    :to="{ path: '/admin'}"
                     tag="li">
                     Admin
                 </router-link>

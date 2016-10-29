@@ -8,7 +8,7 @@
                 <a href="#"
                    class="btn btn-sm btn-secondary">Like</a>
                 <router-link
-                    to="{ name: 'post', params: { slug: post.slug }}"
+                    :to="{ name: 'post', params: { slug: post.slug }}"
                     class="btn btn-sm btn-secondary">
                     View
                 </router-link>
@@ -41,7 +41,7 @@
                 self.$http.get('api/posts')
                     .then(function (response) {
                         console.log(response)
-                        self.posts = JSON.parse(response.data).data
+                        self.posts = response.data.data
                     })
             },
 
