@@ -1,16 +1,11 @@
 <template>
     <section class="content">
-        <h1>Create New Post - {{ $route.params.id }}</h1>
+        <h1>Create/Edit Post - {{ $route.params.id }}</h1>
 
         <div class="row">
             <picturesque-menu :current="posts"></picturesque-menu>
 
             <div class="col-md-10">
-
-                <!-- other items:
-                    category
-                    user
-                -->
 
                 <form @submit.prevent="savePost">
 
@@ -66,12 +61,12 @@
                         </small>
                     </div>
 
-                    <div class="form-group pull-xs-left">
+                    <div class="form-group float-xs-left">
                         <router-link
                                 to="{ path: '/admin/posts' }"
                                 class="btn btn-secondary">Back</router-link>
                     </div>
-                    <div class="form-group pull-xs-right">
+                    <div class="form-group float-xs-right">
                         <button type="button"
                                 @click="savePost"
                                 :disabled="formSaving"
@@ -125,6 +120,7 @@
                     description: '',
                     text: ''
                 },
+                posts: [],
                 pagination: {
                     total: 0,
                     per_page: 10,
