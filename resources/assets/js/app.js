@@ -80,7 +80,7 @@ const routes = [
     { path: '/blog/:slug', name: 'post', component: Post },
     { path: '/about', name: 'about', component: About },
     { path: '/contact', name: 'contact', component: Contact },
-    { path: '/admin', name: 'contact', component: Admin },
+    { path: '/admin', name: 'admin', component: Admin },
 
     { path: '/admin/posts', name: 'admin.posts', component: AdminPosts },
     { path: '/admin/posts/create', name: 'admin.posts.create', component: AdminPostsForm },

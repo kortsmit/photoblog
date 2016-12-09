@@ -52,7 +52,7 @@
                 let self = this
                 self.$http.get('api/categories')
                     .then(function (response) {
-                        self.categories = JSON.parse(response.data).data
+                        self.categories = response.data.data
                     })
             },
 

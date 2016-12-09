@@ -88,8 +88,8 @@
                 self.loading = true
                 self.$http.get('api/users?page='+ self.pagination.current_page)
                         .then(function (response) {
-                            self.users = JSON.parse(response.data).data
-                            self.makePagination(JSON.parse(response.data))
+                            self.users = response.data.data
+                            self.makePagination(response.data)
                         })
             },
 

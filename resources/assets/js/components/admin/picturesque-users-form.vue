@@ -41,7 +41,7 @@
                 let self = this
                 self.$http.get('api/users')
                     .then(function (response) {
-                        self.users = JSON.parse(response.data)
+                        self.users = response.data
                     })
             },
 

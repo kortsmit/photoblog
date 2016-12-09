@@ -68,7 +68,7 @@
 
                     <div class="form-group pull-xs-left">
                         <router-link
-                                to="{ path: '/admin/posts' }"
+                                :to="{ path: '/admin/posts' }"
                                 class="btn btn-secondary">Back</router-link>
                     </div>
                     <div class="form-group pull-xs-right">
@@ -77,18 +77,18 @@
                                 :disabled="formSaving"
                                 class="btn btn-primary">Save</button>
                         <div class="btn-group" role="group">
-                            <button type="button"
-                                    @click="togglePublished(0)"
-                                    :disabled="post.published == 0"
-                                    :disabled="formSaving"
-                                    :class="{ 'btn-success' : post.published == 0 }"
-                                    class="btn btn-secondary">Draft</button>
-                            <button type="button"
-                                    @click="togglePublished(1)"
-                                    :disabled="post.published == 1"
-                                    :disabled="formSaving"
-                                    :class="{ 'btn-success' : post.published == 1 }"
-                                    class="btn btn-secondary">Publish</button>
+                            <!--<button type="button"-->
+                                    <!--@click="togglePublished(0)"-->
+                                    <!--:disabled="post.published == 0"-->
+                                    <!--:disabled="formSaving"-->
+                                    <!--:class="{ 'btn-success' : post.published == 0 }"-->
+                                    <!--class="btn btn-secondary">Draft</button>-->
+                            <!--<button type="button"-->
+                                    <!--@click="togglePublished(1)"-->
+                                    <!--:disabled="post.published == 1"-->
+                                    <!--:disabled="formSaving"-->
+                                    <!--:class="{ 'btn-success' : post.published == 1 }"-->
+                                    <!--class="btn btn-secondary">Publish</button>-->
                         </div>
                     </div>
 

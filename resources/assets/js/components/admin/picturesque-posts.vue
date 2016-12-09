@@ -15,7 +15,7 @@
                             <th></th>
                             <th width="1%">
                                 <router-link
-                                   to="{ name: 'admin.posts.create' }"
+                                   :to="{ name: 'admin.posts.create' }"
                                    class="btn btn-success">Create</router-link>
                             </th>
                         </tr>
@@ -27,7 +27,7 @@
                             <td>{{ post.title }}</td>
                             <td>
                                 <router-link
-                                    to="{ name: 'admin.post.edit', params: { id: post.id }}"
+                                    :to="{ name: 'admin.post.edit', params: { id: post.id }}"
                                     class="btn btn-secondary">Edit</router-link>
                             </td>
                             <td>
@@ -40,7 +40,10 @@
 
                 </table>
 
-                <picturesque-pagination :pagination="pagination" :callback="fetchPosts"></picturesque-pagination>
+                <picturesque-pagination
+                        :pagination="pagination"
+                        :callback="fetchPosts">
+                </picturesque-pagination>
 
             </div>
 
@@ -86,10 +89,10 @@
             fetchPosts () {
                 let self = this
                 self.loading = true
-                self.$http.get('api/posts/all?page='+ self.pagination.current_page)
+                self.$http.get('/api/posts/all?page='+ self.pagination.current_page)
                     .then(function (response) {
-                        self.posts = JSON.parse(response.data).data
-                        self.makePagination(JSON.parse(response.data))
+                        self.posts = response.data.data
+                        self.makePagination(response.data)
                     })
             },
 

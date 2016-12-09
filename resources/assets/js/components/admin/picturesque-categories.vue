@@ -86,10 +86,10 @@
             fetchCategories () {
                 let self = this
                 self.loading = true
-                self.$http.get('api/categories?page='+ self.pagination.current_page)
+                self.$http.get('/api/categories?page='+ self.pagination.current_page)
                         .then(function (response) {
-                            self.categories = JSON.parse(response.data).data
-                            self.makePagination(JSON.parse(response.data))
+                            self.categories = response.data.data
+                            self.makePagination(response.data)
                         })
             },
 
